@@ -187,7 +187,9 @@ nb.fit(X_train, y_train)
 nbScore = nb.score(X_test,y_test)
 print("Accuracy of Naive Bayes: {:.3f}%".format(nbScore*100))
 
-methods_accuracy = {        # Model başarımlarının karşılaştırılması
+# Model başarımlarının karşılaştırılması
+    
+methods_accuracy = {       
     "Logistic Regression":logRegScore,
     "SVM" : svmScore,
     "KNN" : knnScore,
