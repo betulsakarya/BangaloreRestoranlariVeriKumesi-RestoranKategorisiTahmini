@@ -142,6 +142,9 @@ y = lastData[['Restaurant_Category']]
 y.describe()
 
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.25)  # %75 Eğitim Verisi - %25 Test Verisi
+
+# Farklı Algoritmalar İçin Modelin Uygulanması
+
 clf_logreg = LogisticRegression(random_state=0)
 clf_logreg.fit(X_train,y_train)
 y_pred = clf_logreg.predict(X_test)
@@ -184,7 +187,7 @@ nb.fit(X_train, y_train)
 nbScore = nb.score(X_test,y_test)
 print("Accuracy of Naive Bayes: {:.3f}%".format(nbScore*100))
 
-methods_accuracy = {
+methods_accuracy = {        # Model başarımlarının karşılaştırılması
     "Logistic Regression":logRegScore,
     "SVM" : svmScore,
     "KNN" : knnScore,
